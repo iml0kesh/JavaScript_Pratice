@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Your tag</title>
+        <style>
+            h1{
+                background-color: aqua;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .button1{
+                background-color: black;
+                color: white;
+                display: block;
+                margin-top: 20px;
+                border: none;
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 10px;
+                border-radius: 3px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 18px;
+            }
+
+            .mainbuttons{
+                background-color: black;
+                color: white;
+                margin-top: 20px;
+                border: none;
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 10px;
+                border-radius: 3px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 18px;
+                transition: all 0.1s;
+            }
+
+            .mainbuttons:hover{
+                opacity: 70%;
+            }
+
+            .para1{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                /* text-align: center; */
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .divtag{
+                background-color: red;
+                margin-top: 20px;
+                marginb-bottom: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .para{
+                background-color: antiquewhite;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+            }
+
+            .inputtag{
+                margin-top: 20px;
+                
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <p class="para1">Select the Tag you want to create :- </p>
+        <button class="mainbuttons" onclick="addbutton()">Add Button Tag</button>
+        <button class="mainbuttons" onclick="addparagraph()">Add Paragraph Tag</button>
+        <button class="mainbuttons" onclick="addh1()">Add H1 Tag</button>
+        <button class="mainbuttons" onclick="adddiv()">Add Div Tag</button>
+        <button class="mainbuttons" onclick="addinput()">Add Input Tag</button>
+
+        <script>
+
+            function addbutton(){
+                let element = document.createElement('button');
+                element.classList.add('button1');
+                element.innerText = 'Button created';
+                document.body.appendChild(element);
+            }
+
+            function addparagraph(){
+                let element = document.createElement('p');
+                element.classList.add('para')
+                element.innerText = 'Paragraph created';
+                document.body.appendChild(element);
+            }
+
+            function addh1(){
+                let element = document.createElement('h1');
+                element.classList.add('h1');
+                element.innerText = 'H1 created';
+                document.body.appendChild(element);
+            }
+
+            function adddiv(){
+                let element = document.createElement('div');
+                element.classList.add('divtag');
+                element.innerText = 'Div created';
+                document.body.appendChild(element);
+            }
+
+            function addinput(){
+                let element = document.createElement('input');
+                element.classList.add('inputtag');
+                element.innerText = 'Input created';
+                document.body.appendChild(element);
+            }
+
+        </script>
+    </body>
+</html>
